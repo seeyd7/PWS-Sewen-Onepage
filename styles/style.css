@@ -141,7 +141,7 @@ nav{
 .navbar-menu a:hover{
     color: var(--main-color); 
 }
-@media screen and (max-width: 1110px){
+@media screen and (max-width: 780px){
     .home h1 {
       font-size: 35px;
     }
