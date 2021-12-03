@@ -662,6 +662,7 @@ footer img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 .footer-box h2 {
     font-size: 20px;
