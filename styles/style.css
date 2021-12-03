@@ -685,6 +685,7 @@ footer img {
     }
     .footer-box {
         height: auto;
+        width: 100%;
     }
 }
 /* Footer */
