@@ -404,7 +404,7 @@ main {
 }
 @media screen and (max-width: 850px) {
     main {
-        min-width: 150vh;
+        min-height: 150vh;
     }
     .about-main-container {
         flex-direction: column;
