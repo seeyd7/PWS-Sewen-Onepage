@@ -308,3 +308,63 @@ header a:hover {
 }
 /* Services */
 /* Header */
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30%;
+    height: 100vh;
+    width: 100%;
+}
+.heading {
+    text-align: center;
+    color: #6c5ce7;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span {
+    color: black;
+    text-transform: uppercase;
+}
+.about-container {
+    height: 60vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: solid 1px black;
+}
+.about-container-content {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2%;
+    background: #13131a;
+    color: #ccc;
+}
+.about-container img {
+    height: 60vh;
+    width: auto;
+}
+.about-container h2 {
+    color: white;
+}
+.btn-style-1 {
+    position: relative;
+    color: white;
+    background: #6c5ce7;
+    padding: 10px 40px 10px 40px;
+    margin-top: 1vh;
+    transition: .4s;
+}
+.btn-style-1:hover {
+    background: #5140d4;
+    color: white;
+    padding: 10px 60px 10px 60px;;
+}
