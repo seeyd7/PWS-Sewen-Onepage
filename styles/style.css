@@ -403,6 +403,9 @@ main {
     height: 60vh;
 }
 @media screen and (max-width: 850px) {
+    main {
+        min-width: 150vh;
+    }
     .about-main-container {
         flex-direction: column;
         height: auto;
