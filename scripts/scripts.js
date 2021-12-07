@@ -22,7 +22,6 @@ const animationName = [
 	'bounceIn',
 ];
 
-const animationTrigger = [];
 const triggerName = [
 	'.reviews-main-container',
 	'#main',
@@ -32,6 +31,8 @@ const triggerName = [
 ];
 
 	// End of values
+
+const animationTrigger = [];
 
 for (let x = 0; x < triggerName.length; x++) {
 	for (let y = x; y < triggerName.length; y++) {
