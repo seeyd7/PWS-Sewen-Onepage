@@ -5,7 +5,6 @@ const menuToggler = document.querySelector(".menu-toggler");
 const navbar = document.querySelector("nav");
 
 	// Adding animations values
-
 const animationClass = [
 	'.reviews-content',
 	'.main-slogan-content',
@@ -29,7 +28,6 @@ const triggerName = [
 	'#main',
 	'#home',
 ];
-
 	// End of values
 
 const animationTrigger = [];
@@ -81,7 +79,7 @@ addEventListener("scroll", () => {
 		navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
 		console.log(go2Top.style.cursor);
 	}
-	// AnimateCSS animation trigger
+	// AnimateCSS animation trigger	
 	for (let i = 0; i < animationClass.length; i++) {
 		if (blockArray[i] == 0) {
 			if (scroll > animationTrigger[i].offsetTop) {
@@ -89,9 +87,9 @@ addEventListener("scroll", () => {
 				blockArray[i] += 1;
 			}
 		}
-	}
+	}	
+	// End of animation trigger
 })
-
 
 go2Top.addEventListener("click", () => {
 	if(go2Top.style.opacity != 0) window.scrollTo(0, 0);
