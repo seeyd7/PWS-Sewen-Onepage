@@ -5,6 +5,7 @@ const menuToggler = document.querySelector(".menu-toggler");
 const navbar = document.querySelector("nav");
 
 	// Adding animations values
+
 const animationClass = [
 	'.reviews-content',
 	'.main-slogan-content',
@@ -22,18 +23,22 @@ const animationName = [
 ];
 
 const animationTrigger = [];
-	const trigger1 = document.querySelector(".reviews-main-container");
-	animationTrigger.push(trigger1);
-	const trigger2 = document.querySelector("#main");
-	animationTrigger.push(trigger2);
-	const trigger3 = document.querySelector("#main");
-	animationTrigger.push(trigger3);
-	const trigger4 = document.querySelector("#main");
-	animationTrigger.push(trigger4);
-	const trigger5 = document.querySelector("#home");
-	animationTrigger.push(trigger5);
+const triggerName = [
+	'.reviews-main-container',
+	'#main',
+	'#main',
+	'#main',
+	'#home',
+];
 
 	// End of values
+
+for (let x = 0; x < triggerName.length; x++) {
+	for (let y = x; y < triggerName.length; y++) {
+		const x = document.querySelector(triggerName[y]);
+		animationTrigger.push(x);
+	}
+}
 
 const blockArray = [];
 	for (let i = 0; i < animationClass.length; i++) {
