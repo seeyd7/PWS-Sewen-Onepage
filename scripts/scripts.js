@@ -1,11 +1,63 @@
 const go2Top = document.querySelector("#go2Top");
 const menu = document.querySelector("#menu");
-
 const navMenu = document.querySelector(".navbar-menu");
 const menuToggler = document.querySelector(".menu-toggler");
-
 const navbar = document.querySelector("nav");
 
+	// Adding animations values
+const animationClass = [
+	'.reviews-content',
+	'.main-slogan-content',
+	'.about-container-content',
+	'.about-image',
+	'.services',
+];
+
+const animationName = [
+	'bounceIn',
+	'bounceInDown',
+	'fadeInRight',
+	'fadeInLeft',
+	'bounceIn',
+];
+
+const animationTrigger = [];
+	const trigger1 = document.querySelector(".reviews-main-container");
+	animationTrigger.push(trigger1);
+	const trigger2 = document.querySelector("#main");
+	animationTrigger.push(trigger2);
+	const trigger3 = document.querySelector("#main");
+	animationTrigger.push(trigger3);
+	const trigger4 = document.querySelector("#main");
+	animationTrigger.push(trigger4);
+	const trigger5 = document.querySelector("#home");
+	animationTrigger.push(trigger5);
+
+	// End of values
+
+const blockArray = [];
+	for (let i = 0; i < animationClass.length; i++) {
+		let i = 0;
+		blockArray.push(i);
+	}
+
+	// AnimateCSS function
+const animateCSS = (element, animation, prefix = 'animate__') =>
+	new Promise((resolve, reject) => {
+		const animationName = `${prefix}${animation}`;
+		const node = document.querySelector(element);
+
+		node.classList.add(`${prefix}animated`, animationName);
+
+		function handleAnimationEnd(event) {
+			event.stopPropagation();
+			node.classList.remove(`${prefix}animated`, animationName);
+			resolve('Animation ended');
+		}
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+	// End of function
 
 addEventListener("scroll", () => {
 	let scroll = this.scrollY;
@@ -22,6 +74,15 @@ addEventListener("scroll", () => {
 		navbar.style.height = "10vh";
 		navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
 		console.log(go2Top.style.cursor);
+	}
+	// AnimateCSS animation trigger
+	for (let i = 0; i < animationClass.length; i++) {
+		if (blockArray[i] == 0) {
+			if (scroll > animationTrigger[i].offsetTop) {
+				animateCSS(animationClass[i] , animationName[i]);
+				blockArray[i] += 1;
+			}
+		}
 	}
 })
 
@@ -42,5 +103,4 @@ menuToggler.addEventListener("click", () => {
 
 function showIt() {
 	document.querySelector(".header-contact-button").style.opacity = "1";
-  }
-  setTimeout("showIt()", 4700);
+}
